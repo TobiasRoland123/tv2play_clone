@@ -1,5 +1,5 @@
 import "./App.css";
-
+import { Tv2_header } from "./Tv2_header";
 // Import Swiper styles
 import "swiper/css";
 import "swiper/css/navigation";
@@ -9,7 +9,8 @@ import "swiper/css/scrollbar";
 function App() {
   return (
     <>
-      <h1 className=" text-red-500">Vite + React</h1>
+      {" "}
+      <Tv2_header bgColor="bg-bg_col" />
     </>
   );
 }
