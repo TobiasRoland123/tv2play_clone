@@ -6,8 +6,8 @@ interface Tv2_headerProps {
 export const Tv2_header = ({ bgColor = "bg-bg_col" }: Tv2_headerProps) => {
   return (
     <>
-      <header className={`${bgColor} w-screen p-3 md:p-8 lg:p-16 `}>
-        <div className="flex justify-between ">
+      <header className={`${bgColor} w-screen p-3 s max-h-20 flex items-center `}>
+        <div className="flex justify-between w-screen">
           <div>
             <h1 className="text-white text-center">
               <img
