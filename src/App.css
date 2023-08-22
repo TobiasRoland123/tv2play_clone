@@ -1,0 +1,11 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #000723;
+}
+
+.swiper-pagination-bullet-active {
+  background-color: #ffffff;
+}
