@@ -6,7 +6,7 @@ export default {
       colors: {
         primary: "#293144",
         secondary: "#078a1d",
-        lightGray: "#f2f3f4",
+        lightGray: "#0005230f",
         bg_col: "#000723",
         blue_col: "#0c7ae700",
       },

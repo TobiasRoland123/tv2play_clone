@@ -1,9 +1,4 @@
-import { Tv2_usp, UspProps } from "./Tv2_usp";
-
-// interface Tv2_uspSetProps{
-//     usp:UspProps[];
-
-//     }
+import { Tv2_usp } from "./Tv2_usp";
 
 const uspSet = [
   {
@@ -30,7 +25,7 @@ const uspSet = [
 export const Tv2_uspSet = () => {
   return (
     <>
-      <section>
+      <div className="flex flex-col sm:flex-row justify-around w-screen">
         {uspSet.map((usp) => {
           return (
             <>
@@ -43,7 +38,7 @@ export const Tv2_uspSet = () => {
             </>
           );
         })}
-      </section>
+      </div>
     </>
   );
 };

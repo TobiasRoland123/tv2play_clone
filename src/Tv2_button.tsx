@@ -5,6 +5,8 @@ interface Tv2_buttonProps {
 
   label: string;
 
+  costumStyle?: Array<string>;
+
   onClick?: () => void;
 }
 
@@ -13,7 +15,7 @@ export const Tv2_button = ({ btnType = "primary", size = "small", label }: Tv2_b
     if (size === "small") {
       return "w-24";
     } else if (size === "medium") {
-      return "w-40";
+      return "w-52";
     } else if (size === "large") {
       return "w-60";
     }
@@ -32,7 +34,7 @@ export const Tv2_button = ({ btnType = "primary", size = "small", label }: Tv2_b
   return (
     <button
       type="button"
-      className={`${background} ${btnSize} px-5 h-10 text-white rounded-full`}
+      className={`${background} ${btnSize} px-5 h-10 ${btnType === "lightGray" ? "text-primary" : "text-white"} rounded-full `}
     >
       {label}
     </button>
