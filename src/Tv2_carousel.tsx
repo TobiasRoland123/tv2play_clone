@@ -66,14 +66,15 @@ export const Tv2_carousel = () => {
           {carouselImageList.map((image) => {
             return (
               <>
-                <SwiperSlide className="text-white flex relative ">
+                <SwiperSlide className="text-white flex relative   ">
                   {/* <div className={` mx-auto w-screen sm:aspect-video sm:object-cover bg-[url(${image.link})] `}></div> */}
-
-                  <img
-                    className="mx-auto w-screen sm:aspect-video sm:object-cover  "
-                    src={image.link}
-                    alt={image.altTag}
-                  />
+                  <div className="after:bg-gradient-to-b from-blue_col to-bg_col after:absolute after:bottom-0 after:h-3/4 after:w-full  ">
+                    <img
+                      className="mx-auto w-screen sm:aspect-video sm:object-cover  "
+                      src={image.link}
+                      alt={image.altTag}
+                    />
+                  </div>
                   <div className=" absolute bottom-0 left-0 pl-3 pb-5 ">
                     <h2 className=" text-5xl ">{image.title}</h2>
                     <p>{image.description}</p>
@@ -87,3 +88,14 @@ export const Tv2_carousel = () => {
     </>
   );
 };
+
+// s
+
+/*
+content: "";
+display: block;
+position: absolute;
+bottom: 0;
+width: 100%;
+height: 70%;
+background-image: linear-gradient(rgba(12,122,231,0),#000523);*/
