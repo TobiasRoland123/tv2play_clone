@@ -42,12 +42,15 @@ function App() {
         <Tv2_uspSet />
       </section>
 
-      <section className=" max-w-1313 py-14  px-3 flex justify-center flex-col mx-auto max-w-plan-width xl:max-w-1313">
+      <section className=" xl:max-w-1313 py-14  px-3 flex justify-center flex-col mx-auto max-w-plan-width ">
         <div className="pb-6 lg:pb-10 ">
           <h2 className=" text-3xl leading-5 font-bold">Vælg din pakke</h2>
           <p className=" text-sm leading-10">afmeld når som helst - ingen binding</p>
         </div>
         <Tv2_planSet />
+      </section>
+      <section className=" py-14">
+        <Tv2_uspSet />
       </section>
     </>
   );
