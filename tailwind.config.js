@@ -10,6 +10,9 @@ export default {
         bg_col: "#000723",
         blue_col: "#0c7ae700",
       },
+      spacing: {
+        "plan-width": "422px",
+      },
     },
   },
   plugins: [],
