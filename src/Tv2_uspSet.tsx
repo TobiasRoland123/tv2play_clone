@@ -1,7 +1,7 @@
 import { Tv2_usp, UspProps } from "./Tv2_usp";
 
 interface Tv2_uspSetProps {
-  set: Array<{ usp0: Array<UspProps>; usp1: Array<UspProps>; usp2: Array<UspProps> }>;
+  set: Array<{ usp0: Array<UspProps>; usp1: Array<UspProps>; usp2: Array<UspProps>; usp3?: Array<UspProps> }>;
 }
 
 export const Tv2_uspSet = ({
@@ -83,6 +83,25 @@ export const Tv2_uspSet = ({
                   );
                 })}
               </div>
+
+              {uspItem.usp3 ? (
+                <div key={index}>
+                  {uspItem.usp2.map((item) => {
+                    return (
+                      <>
+                        <Tv2_usp
+                          heading={item.heading}
+                          description={item.description}
+                          iconAlt={item.iconAlt}
+                          iconName={item.iconName}
+                        />
+                      </>
+                    );
+                  })}
+                </div>
+              ) : (
+                ""
+              )}
             </>
           );
         })}

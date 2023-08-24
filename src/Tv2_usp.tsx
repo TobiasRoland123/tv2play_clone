@@ -1,5 +1,5 @@
 export interface UspProps {
-  heading: string;
+  heading?: string;
   description: string;
   iconName: string;
   iconAlt: string;
@@ -21,6 +21,7 @@ export const Tv2_usp = ({
             alt={iconAlt}
           />
         </figure>
+
         <h2 className="text-xl my-2">{heading}</h2>
         {/* <p className=" max-w- text-sm">{description}</p> */}
         {/* <p className=" max-w- text-sm">{description}</p> */}

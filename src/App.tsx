@@ -39,7 +39,37 @@ function App() {
         </article>
       </section>
       <section className=" py-14">
-        <Tv2_uspSet />
+        <Tv2_uspSet
+          set={[
+            {
+              usp0: [
+                {
+                  heading: "7 dage til 0 kr",
+                  description: "Få 7 dages TV 2 Play til 0 kr. \n ved køb af Basispakken",
+                  iconName: "gift",
+                  iconAlt: "gift icon",
+                },
+              ],
+              usp1: [
+                {
+                  heading: "Ingen binding",
+                  description: "Med TV 2 Play er der ingen \n binding eller skjulte gebyrer",
+
+                  iconName: "lock",
+                  iconAlt: "lock icon",
+                },
+              ],
+              usp2: [
+                {
+                  heading: "Det bedste - samlet ét sted",
+                  description: "Kun med TV 2 Play får du de største film og \n serier samt det bedste fra TV 2s kanaler",
+                  iconName: "diamond",
+                  iconAlt: "diamond icon",
+                },
+              ],
+            },
+          ]}
+        />
       </section>
 
       <section className=" xl:max-w-1313 py-14  px-3 flex justify-center flex-col mx-auto max-w-plan-width ">
@@ -49,8 +79,38 @@ function App() {
         </div>
         <Tv2_planSet />
       </section>
-      <section className=" py-14">
-        <Tv2_uspSet />
+      <section className=" pt-4 pb-14">
+        <Tv2_uspSet
+          set={[
+            {
+              usp0: [
+                {
+                  heading: "",
+                  description: "Afmeld når som helst",
+                  iconName: "heartbroken",
+                  iconAlt: "broken heart  icon",
+                },
+              ],
+              usp1: [
+                {
+                  heading: "",
+                  description: "Se på alle enheder \n i din husstand",
+
+                  iconName: "devices",
+                  iconAlt: "devices icon",
+                },
+              ],
+              usp2: [
+                {
+                  heading: "",
+                  description: "Tag TV 2 Play med på ferien i hele EU \n og se både live og demand",
+                  iconName: "diamond",
+                  iconAlt: "diamond icon",
+                },
+              ],
+            },
+          ]}
+        />
       </section>
     </>
   );
