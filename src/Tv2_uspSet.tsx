@@ -1,40 +1,88 @@
-import { Tv2_usp } from "./Tv2_usp";
+import { Tv2_usp, UspProps } from "./Tv2_usp";
 
-const uspSet = [
-  {
-    heading: "7 dage til 0 kr.",
-    description: "Få 7 dages TV 2 Play til 0 kr. \n ved køb af Basispakken",
-    iconName: "gift",
-    iconAlt: "gift icon",
-  },
-  {
-    heading: "Ingen binding",
-    description: "Med TV 2 Play er der ingen \n binding eller skjulte gebyrer",
+interface Tv2_uspSetProps {
+  set: Array<{ usp0: Array<UspProps>; usp1: Array<UspProps>; usp2: Array<UspProps> }>;
+}
 
-    iconName: "lock",
-    iconAlt: "lock icon",
-  },
-  {
-    heading: "Det bedste - samlet ét sted",
-    description: "Kun med TV 2 Play får du de største film og \n serier samt det bedste fra TV 2s kanaler",
-    iconName: "diamond",
-    iconAlt: "diamond icon",
-  },
-];
+export const Tv2_uspSet = ({
+  set = [
+    {
+      usp0: [
+        {
+          heading: "7 dage til 0 kr",
+          description: "Få 7 dages TV 2 Play til 0 kr. \n ved køb af Basispakken",
+          iconName: "gift",
+          iconAlt: "gift icon",
+        },
+      ],
+      usp1: [
+        {
+          heading: "Ingen binding",
+          description: "Med TV 2 Play er der ingen \n binding eller skjulte gebyrer",
 
-export const Tv2_uspSet = () => {
+          iconName: "lock",
+          iconAlt: "lock icon",
+        },
+      ],
+      usp2: [
+        {
+          heading: "Det bedste - samlet ét sted",
+          description: "Kun med TV 2 Play får du de største film og \n serier samt det bedste fra TV 2s kanaler",
+          iconName: "diamond",
+          iconAlt: "diamond icon",
+        },
+      ],
+    },
+  ],
+}: Tv2_uspSetProps) => {
   return (
     <>
       <div className="flex flex-col sm:flex-row justify-around w-screen">
-        {uspSet.map((usp) => {
+        {set.map((uspItem, index) => {
           return (
             <>
-              <Tv2_usp
-                heading={usp.heading}
-                description={usp.description}
-                iconAlt={usp.iconAlt}
-                iconName={usp.iconName}
-              />
+              <div key={index}>
+                {uspItem.usp0.map((item) => {
+                  return (
+                    <>
+                      <Tv2_usp
+                        heading={item.heading}
+                        description={item.description}
+                        iconAlt={item.iconAlt}
+                        iconName={item.iconName}
+                      />
+                    </>
+                  );
+                })}
+              </div>
+              <div key={index}>
+                {uspItem.usp1.map((item) => {
+                  return (
+                    <>
+                      <Tv2_usp
+                        heading={item.heading}
+                        description={item.description}
+                        iconAlt={item.iconAlt}
+                        iconName={item.iconName}
+                      />
+                    </>
+                  );
+                })}
+              </div>
+              <div key={index}>
+                {uspItem.usp2.map((item) => {
+                  return (
+                    <>
+                      <Tv2_usp
+                        heading={item.heading}
+                        description={item.description}
+                        iconAlt={item.iconAlt}
+                        iconName={item.iconName}
+                      />
+                    </>
+                  );
+                })}
+              </div>
             </>
           );
         })}
