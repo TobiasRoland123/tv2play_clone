@@ -10,6 +10,7 @@ import { Tv2_button } from "./Tv2_button";
 import { Tv2_trailerFrame } from "./Tv1_trailerFrame";
 import { Tv2_uspSet } from "./Tv2_uspSet";
 import { Tv2_planSet } from "./tv2_planSet";
+import { Tv2_collapsible } from "./Tv2_collapsible";
 
 function App() {
   return (
@@ -111,6 +112,32 @@ function App() {
             },
           ]}
         />
+      </section>
+
+      <section>
+        <Tv2_collapsible text="Du har også mulighed for at købe en eller to livekanaler med binding">
+          <>
+            <article className=" py-10 grid grid-cols-12 gap-x-6 gap-y-6">
+              <div className="flex flex-col col-start-1 col-end-9 gap-1">
+                <h3 className=" text-2xl font-bold leading-5">Vælg en eller to livekanaler</h3>
+                <p className=" leading-6">
+                  Vær opmærksom på, at du med livekanaler ikke får adgang til eventkanalerne, og livekanaler kan ikke kombineres
+                  med andre pakker
+                </p>
+              </div>
+              <div>
+                <div className=" col-start-1 col-end-13">
+                  <div>
+                    <img
+                      src="./public/includes/tv2.png"
+                      alt="tv2 logo"
+                    />
+                  </div>
+                </div>
+              </div>
+            </article>
+          </>
+        </Tv2_collapsible>
       </section>
     </>
   );

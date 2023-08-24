@@ -13,7 +13,7 @@ interface Tv2_buttonProps {
 export const Tv2_button = ({ btnType = "primary", size = "small", label }: Tv2_buttonProps) => {
   function setBtnSize() {
     if (size === "small") {
-      return "w-24";
+      return " min-w-min ";
     } else if (size === "medium") {
       return " min-w-full max-w-xxsm";
     } else if (size === "large") {
