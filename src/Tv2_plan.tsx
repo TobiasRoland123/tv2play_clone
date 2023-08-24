@@ -29,7 +29,7 @@ export const Tv2_plan = ({
 }: Tv2_planProps) => {
   return (
     <>
-      <article className="bg-white  text-primary w-plan-width xl:h-full mb-16 flex flex-col justify-between">
+      <article className="bg-white  text-primary max-w-plan-width xl:h-full mb-16 flex flex-col justify-between">
         <div>
           <div className="flex items-center">
             {mostPopular === true ? (
@@ -79,7 +79,7 @@ export const Tv2_plan = ({
             </ul>
           </div>
         </div>
-        <div className="">
+        <div className=" ">
           <div className="pt-2 px-2">
             {add.map((item) => {
               return (

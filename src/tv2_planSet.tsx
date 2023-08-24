@@ -7,7 +7,7 @@ export const Tv2_planSet = () => {
   return (
     <>
       <section
-        className=" flex flex-col gap-4 xl:grid xl:grid-cols-3 
+        className=" flex flex-col mx-auto gap-4 xl:grid xl:grid-cols-3 
      xl:grid-rows-2"
       >
         <div>

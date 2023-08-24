@@ -15,7 +15,7 @@ export const Tv2_button = ({ btnType = "primary", size = "small", label }: Tv2_b
     if (size === "small") {
       return "w-24";
     } else if (size === "medium") {
-      return "w-48";
+      return " min-w-full max-w-xxsm";
     } else if (size === "large") {
       return "w-60";
     }

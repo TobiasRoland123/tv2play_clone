@@ -13,6 +13,11 @@ export default {
       spacing: {
         "plan-width": "422px",
       },
+      maxWidth: {
+        1313: "1313px",
+        "plan-width": "422px",
+        xxsm: "161px",
+      },
     },
   },
   plugins: [],

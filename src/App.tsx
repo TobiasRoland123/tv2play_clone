@@ -9,6 +9,7 @@ import { Tv2_carousel } from "./Tv2_carousel";
 import { Tv2_button } from "./Tv2_button";
 import { Tv2_trailerFrame } from "./Tv1_trailerFrame";
 import { Tv2_uspSet } from "./Tv2_uspSet";
+import { Tv2_planSet } from "./tv2_planSet";
 
 function App() {
   return (
@@ -41,9 +42,12 @@ function App() {
         <Tv2_uspSet />
       </section>
 
-      <section className="py-14 px-3">
-        <h2 className=" text-3xl leading-5 font-bold">Vælg din pakke</h2>
-        <p className=" text-sm leading-10">afmeld når som helst - ingen binding</p>
+      <section className=" max-w-1313 py-14  px-3 flex justify-center flex-col mx-auto max-w-plan-width xl:max-w-1313">
+        <div className="pb-6 lg:pb-10 ">
+          <h2 className=" text-3xl leading-5 font-bold">Vælg din pakke</h2>
+          <p className=" text-sm leading-10">afmeld når som helst - ingen binding</p>
+        </div>
+        <Tv2_planSet />
       </section>
     </>
   );
