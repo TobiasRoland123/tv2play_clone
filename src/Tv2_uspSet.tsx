@@ -86,7 +86,7 @@ export const Tv2_uspSet = ({
 
               {uspItem.usp3 ? (
                 <div key={index}>
-                  {uspItem.usp2.map((item) => {
+                  {uspItem.usp3.map((item) => {
                     return (
                       <>
                         <Tv2_usp

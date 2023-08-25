@@ -11,6 +11,7 @@ import { Tv2_trailerFrame } from "./Tv1_trailerFrame";
 import { Tv2_uspSet } from "./Tv2_uspSet";
 import { Tv2_planSet } from "./tv2_planSet";
 import { Tv2_collapsible } from "./Tv2_collapsible";
+import { Tv2_sportSlider } from "./Tv2_sportSlider";
 
 function App() {
   return (
@@ -114,7 +115,7 @@ function App() {
         />
       </section>
 
-      <section>
+      <section className=" max-w-1313 lg:px-14">
         <Tv2_collapsible text="Du har også mulighed for at købe en eller to livekanaler med binding">
           <>
             <article className=" py-10 grid grid-cols-12 gap-x-6 gap-y-6">
@@ -188,6 +189,93 @@ function App() {
             />
           </article>
         </Tv2_collapsible>
+      </section>
+
+      <article className=" max-w-1313 lg:px-14 ">
+        <div className="py-10">
+          <div className="flex justify-center">
+            <Tv2_button
+              label="Prøv Basis i 7 dage gratis*"
+              size={"small"}
+              btnType={"secondary"}
+            />
+          </div>
+          <p className=" text-xs leading-6 text-center mt-3">*gælder kun basis</p>
+        </div>
+        <div className=" px-3 ">
+          <h3 className=" text-3xl leading-7 font-bold"> Alle TV 2s kanaler, samlet ét sted</h3>
+          <p className=" text-base leading-6 mt-2 max-w-prose">
+            Med TV 2 Play får du det bedste indhold fra alle TV 2s syv kanaler - når du vil, og hvor du vil. Bliv opdateret på
+            dagens nyheder, følg med i din favorit-sportsgren eller grin til knivskarp comedy.
+          </p>
+        </div>
+      </article>
+
+      <section className=" pt-10 pl-3 md:px-16 md:flex justify-center flex-col">
+        <h2 className=" text-xl font-medium leading-5 mb-4">Sport på Tv 2 Play</h2>
+        <Tv2_sportSlider
+          sliderSet={[
+            { image: "fodbold", text: "UEFA Europa League, LaLiga og serie A", sportType: "fodbold" },
+            { image: "cykling", sportType: "cykling", text: "Grand Tours og forårsklassikere" },
+            { image: "amerikansk_fodbold", sportType: "Amerikansk fodbold", text: "NFL-kampe og Super Bowl" },
+            { image: "badminton", sportType: "Badminton", text: "De største turneringer" },
+            { image: "håndbold", sportType: "Håndbold", text: "EM og VM, samt liga for både " },
+            { image: "tennis", sportType: "Tennis", text: "ATP og WTA" },
+            { image: "basketball", sportType: "Basketball", text: "NBA direkte fra USA" },
+            { image: "skiskydning", sportType: "Skiskydning", text: "World Cup og VM" },
+          ]}
+        />
+      </section>
+      <div className="py-10">
+        <div className="flex justify-center">
+          <Tv2_button
+            label="Kom i gang med Tv 2 Play"
+            size={"small"}
+            btnType={"secondary"}
+          />
+        </div>
+        <p className=" text-xs leading-6 text-center mt-3">Prøv nu - ingen binding</p>
+      </div>
+      <section className=" pt-4 pb-14 max-w-1313 ">
+        <Tv2_uspSet
+          set={[
+            {
+              usp0: [
+                {
+                  heading: "Oplev Tv2 Play",
+                  description: "Se det store udvalg af serier, \n dokumentarer, comedy m.m.",
+                  iconName: "glasses",
+                  iconAlt: "glasses  icon",
+                },
+              ],
+              usp1: [
+                {
+                  heading: "Hvor kan jeg se TV 2 Play?",
+                  description: "Få overblik over de platforme, der \n understøtter TV 2 Play",
+
+                  iconName: "devices",
+                  iconAlt: "devices icon",
+                },
+              ],
+              usp2: [
+                {
+                  heading: "Har du spørgsmål?",
+                  description: "Find hjælp i vores kundecenter eller \n kontakt vores kundeservice",
+                  iconName: "headset",
+                  iconAlt: "headset icon",
+                },
+              ],
+              usp3: [
+                {
+                  heading: "Giv et gavekort til TV 2 Play",
+                  description: "Giv et TV 2 Play-abonnement på enten 30 \n eller 90 dage",
+                  iconName: "gift",
+                  iconAlt: "gift icon",
+                },
+              ],
+            },
+          ]}
+        />
       </section>
     </>
   );
