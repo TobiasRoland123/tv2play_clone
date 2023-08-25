@@ -30,7 +30,7 @@ function App() {
         <small className="text-white text-center"> *gælder kun basis</small>
       </div>
 
-      <section className=" px-3 py-10 flex flex-col xl:grid  xl:grid-cols-2 xl:gap-10 xl:px-10">
+      <section className=" px-3 py-10 flex flex-col xl:grid  xl:grid-cols-2 xl:gap-10 xl:px-10 max-w-screen-2xl mx-auto">
         <Tv2_trailerFrame src="https://www.youtube.com/embed/dDK_u-lx1c0" />
         <article className=" mt-6 pr-10 xl:w-4/5 xl:flex xl:justify-center xl:flex-col xl:mx-auto ">
           <h2 className=" text-4xl leading-tight font-bold">Agent - ny komedieserie på TV 2 Play</h2>
@@ -40,7 +40,7 @@ function App() {
           </p>
         </article>
       </section>
-      <section className=" py-14">
+      <section className=" py-14 max-w-1313">
         <Tv2_uspSet
           set={[
             {
@@ -81,7 +81,7 @@ function App() {
         </div>
         <Tv2_planSet />
       </section>
-      <section className=" pt-4 pb-14">
+      <section className=" pt-4 pb-14 max-w-1313">
         <Tv2_uspSet
           set={[
             {
@@ -115,7 +115,7 @@ function App() {
         />
       </section>
 
-      <section className=" max-w-1313 lg:px-14">
+      <section className=" max-w-1313 lg:px-14 mx-auto">
         <Tv2_collapsible text="Du har også mulighed for at købe en eller to livekanaler med binding">
           <>
             <article className=" py-10 grid grid-cols-12 gap-x-6 gap-y-6">
@@ -191,7 +191,7 @@ function App() {
         </Tv2_collapsible>
       </section>
 
-      <article className=" max-w-1313 lg:px-14 ">
+      <article className=" max-w-1313 lg:px-14 mx-auto">
         <div className="py-10">
           <div className="flex justify-center">
             <Tv2_button
