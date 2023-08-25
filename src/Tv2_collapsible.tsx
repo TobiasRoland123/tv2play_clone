@@ -1,5 +1,6 @@
 import { Disclosure, Transition } from "@headlessui/react";
 import { ChevronRightIcon } from "@heroicons/react/20/solid";
+import { motion } from "framer-motion";
 
 interface Tv2_collapsibleProps {
   text: string;
@@ -14,26 +15,30 @@ export const Tv2_collapsible = ({
     <>
       <Disclosure
         as={"div"}
-        className={` border-4 max-w-1313 px-3`}
+        className={`  max-w-1313 px-3`}
       >
-        <div className=" flex gap-x-3 items-center">
-          <div>
-            <Disclosure.Button className={` w-12 h-12 bg-white rounded-full`}>
-              <ChevronRightIcon className="  text-primary rotate-90 ui-open:-rotate-90 ui-open:transform " />
-            </Disclosure.Button>
-          </div>
-          <span className=" font-medium leading-5">{text}</span>
-        </div>
-        <Transition
-          enter="transition duration-100 ease-out"
-          enterFrom="transform scale-95 opacity-0"
-          enterTo="transform scale-100 opacity-100"
-          leave="transition duration-75 ease-out"
-          leaveFrom="transform scale-100 opacity-100"
-          leaveTo="transform scale-95 opacity-0"
-        >
-          <Disclosure.Panel>{children}</Disclosure.Panel>
-        </Transition>
+        {({ open }) => (
+          <>
+            <div className=" flex gap-x-3 items-center py-4">
+              <div>
+                <Disclosure.Button className={` w-12 h-12 bg-white rounded-full relative`}>
+                  <ChevronRightIcon className="  text-primary rotate-90 ui-open:-rotate-90 ui-open:transform " />
+                </Disclosure.Button>
+              </div>
+              <span className=" font-medium leading-5">{text}</span>
+            </div>
+            <Transition
+              enter="transition ease-in-out duration-400 transform"
+              enterFrom=" scale-y-0"
+              enterTo=" scale-y-full"
+              leave="transition ease-in-out duration-400 transform"
+              leaveFrom="scale-y-full"
+              leaveTo=" scale-y-0"
+            >
+              <Disclosure.Panel className={"bg-dark_blue_col   "}>{children}</Disclosure.Panel>
+            </Transition>
+          </>
+        )}
       </Disclosure>
     </>
   );

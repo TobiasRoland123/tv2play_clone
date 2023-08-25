@@ -1,5 +1,5 @@
 interface Tv2_buttonProps {
-  btnType: "primary" | "secondary" | "lightGray";
+  btnType: "primary" | "secondary" | "lightGray" | "disabled";
 
   size: "small" | "medium" | "large";
 
@@ -27,6 +27,8 @@ export const Tv2_button = ({ btnType = "primary", size = "small", label }: Tv2_b
       return "bg-secondary";
     } else if (btnType === "lightGray") {
       return "bg-lightGray";
+    } else if (btnType === "disabled") {
+      return "bg-btn_disabled";
     }
   }
   function setBtnHeight() {
@@ -47,7 +49,7 @@ export const Tv2_button = ({ btnType = "primary", size = "small", label }: Tv2_b
       type="button"
       className={`${background} ${btnSize} ${btnHeight}  px-5 h-10 ${
         btnType === "lightGray" ? "text-primary" : "text-white"
-      } rounded-full `}
+      } rounded-full  ${btnType === "disabled" ? "text-opacity-50" : "text-opacity-100"}`}
     >
       {label}
     </button>

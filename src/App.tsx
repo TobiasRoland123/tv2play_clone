@@ -125,18 +125,68 @@ function App() {
                   med andre pakker
                 </p>
               </div>
-              <div>
-                <div className=" col-start-1 col-end-13">
-                  <div>
-                    <img
-                      src="./public/includes/tv2.png"
-                      alt="tv2 logo"
-                    />
-                  </div>
+
+              <div className=" col-start-1 col-end-13  flex-row flex flex-wrap gap-2  items-start">
+                <div className="bg-white w-28 h-12 flex justify-center items-center">
+                  <img
+                    className="  h-6 "
+                    src="./public/includes/black/tv2.png"
+                    alt="tv2 logo"
+                  />
                 </div>
+                <div className="bg-white w-28 h-12 flex justify-center items-center">
+                  <img
+                    className="  h-6 "
+                    src="./public/includes/black/tv2news.png"
+                    alt="tv2 logo"
+                  />
+                </div>
+                <div className="bg-white w-28 h-12 flex justify-center items-center">
+                  <img
+                    className="  h-6 "
+                    src="./public/includes/black/tv2echo.png"
+                    alt="tv2 logo"
+                  />
+                </div>
+                <div className="bg-white w-28 h-12 flex justify-center items-center">
+                  <img
+                    className="  h-6 "
+                    src="./public/includes/black/tv2charlie.png"
+                    alt="tv2 logo"
+                  />
+                </div>
+                <div className="bg-white w-28 h-12 flex justify-center items-center">
+                  <img
+                    className=" h-6 "
+                    src="./public/includes/black/tv2fri.png"
+                    alt="tv2 logo"
+                  />
+                </div>
+              </div>
+              <div className="flex flex-col col-start-1 col-end-9">
+                <p className="block">Vælg mindst 1 kanal</p>
+                <p>6 måneders binding: 412 kr. for hele perioden</p>{" "}
+              </div>
+              <div className="col-start-1 col-end-9">
+                <Tv2_button
+                  label="69 kr./md."
+                  size="small"
+                  btnType="disabled"
+                />
               </div>
             </article>
           </>
+        </Tv2_collapsible>
+
+        <Tv2_collapsible text="Har du en gavekode?">
+          <article>
+            <input type="text" />
+            <Tv2_button
+              label="Indløs"
+              btnType="disabled"
+              size="small"
+            />
+          </article>
         </Tv2_collapsible>
       </section>
     </>

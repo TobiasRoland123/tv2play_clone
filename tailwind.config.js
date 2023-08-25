@@ -9,6 +9,8 @@ export default {
         lightGray: "#0005230f",
         bg_col: "#000723",
         blue_col: "#0c7ae700",
+        dark_blue_col: "#0a0f2c",
+        btn_disabled: "#141935",
       },
       spacing: {
         "plan-width": "422px",
